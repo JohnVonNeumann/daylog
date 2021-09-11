@@ -3,6 +3,11 @@
 
 Log --* Task
 DayLog --* Log
+Task -|> TaskType
+
+DayLog -|> IInsertToDatabase
+Log -|> IInsertToDatabase
+Task -|> IInsertToDatabase
 
 enum TaskType {
     RESEARCH
@@ -11,22 +16,45 @@ enum TaskType {
 }
 
 class Task {
+    - Integer id
+    - String name
     - String description
+    - LocalDateTime dateTime
+    - TaskType type
 
-    + Task(String description)
+    + Task(String name, String description, TaskType type)
+
+    + String toString()
+
+    .. Getters ..
+    + void getName()
+    + void getDescription()
+    + void getType()
+
 }
 
 class Log {
+    - Integer id
     - LocalDateTime dateTime
     - ArrayList<Task> tasks
 
-    + Log(ArrayList<TasK> tasks
+    + Log(ArrayList<Task> tasks)
+
+    + void addTask(Task task)
+    + void removeTask(Integer int)
 }
 
 class DayLog {
+    - Integer id
+    - LocalDateTime dateTime
     - ArrayList<Log> logs
 
     + DayLog(ArrayList<Log> logs)
+
+    + void outputToStdout()
 }
 
+interface IInsertToDatabase {
+    + void insertToDatabase
+}
 @enduml
