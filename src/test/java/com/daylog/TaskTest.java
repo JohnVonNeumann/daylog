@@ -1,17 +1,28 @@
 package com.daylog;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TaskTest {
 
-    @BeforeEach
+    private Task task;
+
+    @BeforeAll
     void setUp() {
+        this.task = new Task();
     }
 
-    @AfterEach
+    @Test
+    void TaskTest() {
+        assertTrue(true);
+    }
+
+    @AfterAll
     void tearDown() {
     }
 }
