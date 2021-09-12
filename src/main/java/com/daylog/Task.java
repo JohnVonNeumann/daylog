@@ -27,7 +27,7 @@ public class Task {
     }
 
     public String getDescription() {
-        throw new NotYetImplementedException();
+        return this.description;
     }
 
     public String getType() {
