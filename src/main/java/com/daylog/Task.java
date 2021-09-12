@@ -19,7 +19,7 @@ public class Task {
 
     @Override
     public String toString() {
-        throw new NotYetImplementedException();
+        return this.name + "\n\t" + this.description + "\n\t" + this.type.toString();
     }
 
     public String getName() {

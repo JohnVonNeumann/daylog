@@ -35,6 +35,11 @@ class TaskTest {
         assertEquals(this.task.getType(), "RESEARCH");
     }
 
+    @Test
+    void toStringTest() {
+        assertEquals(this.task.toString(), "Research API docs\n\tRead through the API docs of x vendor\n\tRESEARCH");
+    }
+
     @AfterAll
     void tearDown() {
     }
