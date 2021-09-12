@@ -30,6 +30,11 @@ class TaskTest {
         assertEquals(this.task.getDescription(), "Read through the API docs of x vendor");
     }
 
+    @Test
+    void getTaskTypeTest() {
+        assertEquals(this.task.getType(), "RESEARCH");
+    }
+
     @AfterAll
     void tearDown() {
     }

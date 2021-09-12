@@ -31,6 +31,6 @@ public class Task {
     }
 
     public String getType() {
-        throw new NotYetImplementedException();
+        return this.type.toString();
     }
 }
