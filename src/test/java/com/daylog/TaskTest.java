@@ -14,12 +14,15 @@ class TaskTest {
 
     @BeforeAll
     void setUp() {
-        this.task = new Task();
+        final String description = "Read through the API docs of x vendor";
+        final String name = "Research API docs";
+        final TaskType type = TaskType.RESEARCH;
+        this.task = new Task(name, description, type);
     }
 
     @Test
-    void TaskTest() {
-        assertTrue(true);
+    void getTaskNameTest() {
+        assertEquals(this.task.getName(), "Research API docs");
     }
 
     @AfterAll

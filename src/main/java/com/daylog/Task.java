@@ -23,7 +23,7 @@ public class Task {
     }
 
     public String getName() {
-        throw new NotYetImplementedException();
+        return this.name;
     }
 
     public String getDescription() {

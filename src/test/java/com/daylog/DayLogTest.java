@@ -14,7 +14,7 @@ class DayLogTest {
 
     @BeforeAll
     void setUp() {
-        this.dayLog = new DayLog();
+//        this.dayLog = new DayLog();
     }
 
     @Test
